@@ -72,11 +72,7 @@ class AuthController extends Controller
      */
     public function index()
     {
-        if (Auth::check()) {
-            return view('admin.dashboard');
-        }
-
-        return redirect('/login')->withSuccess('Opps! you do not have access');
+        return view('admin.dashboard');
     }
 
     /**

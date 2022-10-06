@@ -10,7 +10,7 @@
                         <div class="card-header">Register</div>
                         <div class="card-body">
 
-                            <form action="{{ route('register.post') }}" method="POST">
+                            <form action="{{ route('register.post') }}" method="POST" autocomplete="off" >
                                 @csrf
                                 <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
@@ -24,7 +24,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="email" class="col-md-4 col-form-label text-md-right">Mail</label>
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
                                     <div class="col-md-6">
                                         <input type="text" id="email" class="form-control" name="email" required
                                             autofocus>
@@ -44,10 +44,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Register
-                                    </button>
+                                <div class="form-group row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary">
+                                            Register
+                                        </button>
+                                    </div>
                                 </div>
                             </form>
 

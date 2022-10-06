@@ -12,7 +12,7 @@
                         <div class="card-header">Login</div>
                         <div class="card-body">
 
-                            <form action="{{ route('login.post') }}" method="POST">
+                            <form action="{{ route('login.post') }}" method="POST" autocomplete="off">
                                 @csrf
                                 <div class="form-group row">
                                     <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
@@ -36,7 +36,8 @@
                                 </div>
 
                                 <div clas="form-group row">
-                                    <div clas="col-md-6 offset-md-4">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6 offset-md-4">
                                         <div class="checkbox">
                                             <label>
                                                 <input type="checkbox" name="remember">Remember Me
@@ -46,9 +47,12 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <button type="submit" class="btn btn-primary">
-                                        Login
-                                    </button>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary">
+                                            Login
+                                        </button>
+                                    </div>
                                 </div>
 
                             </form>

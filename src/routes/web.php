@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +16,35 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::redirect('/', '/login');
+Route::redirect('/', 'login');
 
 // ログイン
-Route::get('/login', [AuthController::class, 'login']);
+Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 
 // 楼録
-Route::get('/register', [AuthController::class, 'register']);
+Route::get('register', [AuthController::class, 'register'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegister'])->name('register.post');
 
-//　ダッシュボード
-Route::get('/admin', [AuthController::class, 'index']);
+// 管理者ページ
+Route::redirect('admin', 'admin/dashboard');
+Route::prefix('admin')->middleware([Authenticate::class])->group(function() {
+        //　ダッシュボード
+        Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
+
+        // ユーザー一覧
+        Route::get('users', [UserController::class, 'index'])->name('users');
+        Route::prefix('users')->group(function() {
+                // ユーザー追加
+                Route::post('create', [UserController::class, 'create'])->name('users.create');
+                //　ユーザー表示
+                Route::get('show', [UserController::class, 'show'])->name('users.show');
+                //　ユーザー更新
+                Route::put('edit', [UserController::class, 'edit'])->name('users.edit');
+                //　ユーザー削除
+                Route::delete('delete', [UserController::class, 'delete'])->name('users.delete');
+        });
+});
 
 //　ログアウト
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
