@@ -36,13 +36,15 @@ Route::prefix('admin')->middleware([Authenticate::class])->group(function() {
         Route::get('users', [UserController::class, 'index'])->name('users');
         Route::prefix('users')->group(function() {
                 // ユーザー追加
-                Route::post('create', [UserController::class, 'create'])->name('users.create');
-                //　ユーザー表示
-                Route::get('show', [UserController::class, 'show'])->name('users.show');
+                Route::get('create', [UserController::class, 'create'])->name('users.create');
                 //　ユーザー更新
-                Route::put('edit', [UserController::class, 'edit'])->name('users.edit');
+                Route::get('edit', [UserController::class, 'edit'])->name('users.edit');
                 //　ユーザー削除
                 Route::delete('delete', [UserController::class, 'delete'])->name('users.delete');
+                // ユーザー保存
+                Route::post('save', [UserController::class, 'save'])->name('users.save');
+                // ユーザーアップデート
+                Route::put('update', [UserController::class, 'update'])->name('users.update');
         });
 });
 

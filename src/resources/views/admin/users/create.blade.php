@@ -1,3 +1,5 @@
+@extends('../../layout')
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -5,7 +7,7 @@
                 <h2>Add New User</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('users') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -21,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('users.store') }}" method="POST">
+    <form action="{{ route('users.save') }}" method="POST" autocomplete="off" >
         @csrf
 
         <div class="row">
@@ -33,8 +35,21 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>email:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Email"></textarea>
+                    <strong>Email:</strong>
+                    <input 
+                    class="form-control" 
+                    name="email" 
+                    placeholder="Email">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Password:</strong>
+                    <input 
+                    class="form-control" 
+                    name="password" 
+                    type="password"
+                    placeholder="Password">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

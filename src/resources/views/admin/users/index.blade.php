@@ -31,11 +31,9 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>
-                    <form action="{{ route('users.delete', $user->id) }}" method="DELETE">
+                    <form action="{{ route('users.delete', ['id' => $user->id]) }}" method="DELETE">
 
-                        <a class="btn btn-info" href="{{ route('users.show', $user->id) }}">Show</a>
-
-                        <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('users.edit', ['id' => $user->id]) }}">Edit</a>
 
                         @csrf
                         @method('DELETE')

@@ -7,7 +7,7 @@
                 <h2>Edit User</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('users') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,10 +23,8 @@
         </div>
     @endif
 
-    <form action="{{ route('users.update', $user->id) }}" method="POST">
+    <form action="{{ route('users.update') }}" method="PUT" autocomplete="off">
         @csrf
-        @method('PUT')
-
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -38,7 +36,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Email">{{ $user->email }}</textarea>
+                    <input class="form-control" type="email" name="email" value="{{ $user->email }}"
+                        placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

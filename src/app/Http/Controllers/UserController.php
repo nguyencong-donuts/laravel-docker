@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -32,27 +33,18 @@ class UserController extends Controller
      * 
      * @return
      */
-    public function store(Request $request)
+    public function save(Request $request)
     {
 
         $request->validate([
             'email' => 'required',
-            'passowrd' => 'required'
+            'password' => 'required'
         ]);
 
         User::create($request->all());
         return redirect()->route('users')
                     ->with('success','User created successfully.');
 
-    }
-
-    /**
-     * 
-     * @return
-     */
-    public function show(User $user)
-    {
-        return view('admin.users.show', compact('user'));
     }
 
     /**
@@ -75,7 +67,6 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
-
         $user->update($request->all());
         return redirect()->route('users')
                     ->with('success','User updated successfully');
