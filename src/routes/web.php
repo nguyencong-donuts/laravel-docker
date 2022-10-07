@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\Authenticate;
 
@@ -28,13 +29,13 @@ Route::post('post-registration', [AuthController::class, 'postRegister'])->name(
 
 // 管理者ページ
 Route::redirect('admin', 'admin/dashboard');
-Route::prefix('admin')->middleware([Authenticate::class])->group(function() {
+Route::prefix('admin')->middleware([Authenticate::class])->group(function () {
         //　ダッシュボード
         Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
 
         // ユーザー一覧
         Route::get('users', [UserController::class, 'index'])->name('users');
-        Route::prefix('users')->group(function() {
+        Route::prefix('users')->group(function () {
                 // ユーザー追加
                 Route::get('create', [UserController::class, 'create'])->name('users.create');
                 //　ユーザー更新
@@ -50,3 +51,6 @@ Route::prefix('admin')->middleware([Authenticate::class])->group(function() {
 
 //　ログアウト
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+// エラー
+Route::get('not-have-access', [ErrorController::class, 'noHaveAccess'])->name('not-have-access');
