@@ -6,7 +6,7 @@
             <h2 class="font-weight-bold text-monospace">ユーザー一覧</h2>
         </div>
         <div class="row m-2 float-right">
-            <a class="btn btn-success" href="{{ route('users.create') }}">
+            <a class="btn btn-primary" href="{{ route('users.create') }}">
                 <i class="fa fa-user-plus"></i>
                 追加
             </a>
@@ -33,7 +33,7 @@
                     <td>
                         <form action="{{ route('users.delete', ['id' => $user->id]) }}" method="DELETE">
 
-                            <a class="btn btn-primary" href="{{ route('users.edit', ['id' => $user->id]) }}">修正</a>
+                            <a class="btn btn-info" href="{{ route('users.edit', ['id' => $user->id]) }}">修正</a>
 
                             @csrf
                             @method('DELETE')

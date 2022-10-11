@@ -140,7 +140,7 @@ body {
 /*--------------------sidebar-brand----------------------*/
 
 .sidebar-wrapper .sidebar-brand {
-    padding: 10px 20px;
+    padding: 1.25rem 1.25rem;
     display: flex;
     align-items: center;
 }
