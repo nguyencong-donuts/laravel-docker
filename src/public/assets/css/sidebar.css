@@ -421,7 +421,7 @@ body {
     box-shadow: none;
 }
 
-.chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-role,
+/* .chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-role,
 .chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-status,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text,
@@ -429,7 +429,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
 .chiller-theme .sidebar-footer > a {
     color: #818896;
-}
+} */
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover > a,
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a,

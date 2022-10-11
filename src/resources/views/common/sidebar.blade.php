@@ -1,14 +1,14 @@
 <div class="page-wrapper chiller-theme toggled">
-    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-        <i class="fas fa-bars"></i>
-    </a>
+    <span id="show-sidebar" class="btn btn-sm btn-dark">
+        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+    </span>
     <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
             <div class="sidebar-brand">
-                <a href="#">株式会社 Taro Nguyen</a>
-                <div id="close-sidebar">
-                    <i class="fas fa-times"></i>
-                </div>
+                <a href="/#">株式会社 Taro Nguyen</a>
+                <span id="close-sidebar">
+                    <i class="fa-sharp fa-solid fa-arrow-left"></i>
+                </span>
             </div>
             {{-- <div class="sidebar-header">
                 <div class="user-pic">

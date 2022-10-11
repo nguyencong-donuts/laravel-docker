@@ -13,6 +13,15 @@ body {
 
 .navbar-laravel {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #31353d !important;
+}
+
+a {
+    color: #818896;
+}
+
+a:hover {
+    color: #b8bfce;
 }
 
 .page-width {
