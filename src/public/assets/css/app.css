@@ -16,17 +16,23 @@ body {
     background-color: #31353d !important;
 }
 
-a {
+.navbar-laravel a {
     color: #818896;
 }
 
-a:hover {
+.navbar-laravel a:hover {
     color: #b8bfce;
 }
 
 .page-width {
     width: calc(100% - 250px);
     float: right;
+}
+
+@media (max-width: 767.98px) {
+    .page-width {
+        width: 100%;
+    }
 }
 
 .section {

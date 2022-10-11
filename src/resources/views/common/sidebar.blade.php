@@ -5,7 +5,7 @@
     <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
             <div class="sidebar-brand">
-                <a href="/#">株式会社 Taro Nguyen</a>
+                <a href="/admin">株式会社 Taro Nguyen</a>
                 <span id="close-sidebar">
                     <i class="fa-sharp fa-solid fa-arrow-left"></i>
                 </span>

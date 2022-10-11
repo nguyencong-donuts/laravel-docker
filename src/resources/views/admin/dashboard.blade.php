@@ -2,9 +2,12 @@
 
 @section('content')
     <div class="section">
-        <div class="row justify-content-center">
+        <div class="row ml-3 mb-3">
+            <h2 class="font-weight-bold text-monospace">ダッシュボード</h2>
+        </div>
+        <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
 

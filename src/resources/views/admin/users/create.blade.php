@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <div class="w-50 mw-100 m-auto">
+        <div class="row col-md-6 w-50 m-auto">
             <form action="{{ route('users.save') }}" method="POST" autocomplete="off">
                 @csrf
 

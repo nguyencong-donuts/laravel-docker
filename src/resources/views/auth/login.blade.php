@@ -39,8 +39,8 @@
                                     <div class="col-md-4"></div>
                                     <div class="col-md-6 offset-md-4">
                                         <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember">Remember Me
+                                            <label class="d-flex align-items-center justify-content-start">
+                                                <input type="checkbox" name="remember">ログイン情報を保存する
                                             </label>
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                                 <div class="form-group row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-6">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit" class="btn btn-primary w-100">
                                             ログイン
                                         </button>
                                     </div>

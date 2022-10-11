@@ -47,7 +47,7 @@
                                 <div class="form-group row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-6">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit" class="btn btn-primary w-100">
                                             登録
                                         </button>
                                     </div>
