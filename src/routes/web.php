@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\UserController;
-use App\Http\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +28,7 @@ Route::post('post-registration', [AuthController::class, 'postRegister'])->name(
 
 // 管理者ページ
 Route::redirect('admin', 'admin/dashboard');
-Route::prefix('admin')->middleware([Authenticate::class])->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
         //　ダッシュボード
         Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
 

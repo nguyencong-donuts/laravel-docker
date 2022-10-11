@@ -3,49 +3,39 @@
 
 <head>
     <title>株式会社 TaroNguyen</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/app.csss">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
 </head>
 
 <body>
 
     {{-- ヘッダーアリア --}}
-    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="#">Taro Nguyen</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    @include('common.header')
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">Register</a>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('logout') }}">Logout</a>
-                        </li>
-                    @endguest
-                </ul>
+    <div class="d-flex flex-wrap" style="width: 100%">
 
-            </div>
-        </div>
-    </nav>
+        {{-- サイドバー --}}
+        @include('common.sidebar')
 
-    {{-- コンテンツアリア --}}
-    @yield('content')
+        {{-- コンテンツアリsア --}}
+        @yield('content')
+
+    </div>
 
     {{-- フッタアリア --}}
-    <footer>
-        <h1>This is footer section</h1>
-    </footer>
+    @include('common.footer')
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer>
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer>
+    </script>
+    <script src="{{ asset('assets/js/app.js') }}" defer></script>
+    <script src="{{ asset('assets/js/bootstrap.js') }}" defer></script>
 </body>
 
 </html>
