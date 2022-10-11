@@ -70,7 +70,7 @@
                     </li>
                     <li>
                         <a href="{{ route('users') }}">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-user"></i>
                             <span>ユーザー一覧</span>
                             {{-- <span class="badge badge-pill badge-danger">3</span> --}}
                         </a>
