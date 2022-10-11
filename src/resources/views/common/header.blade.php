@@ -1,4 +1,4 @@
-<nav class="page-width navbar navbar-expand-lg navbar-light navbar-laravel shadow-sm p-3 mb-2 bg-white rounded">
+<nav class="page-width navbar navbar-expand-lg navbar-light navbar-laravel shadow-sm p-3 mb-2 bg-white">
     <div class="container">
         <a class="navbar-brand" href="#">Taro Nguyen</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

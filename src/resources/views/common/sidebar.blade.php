@@ -48,7 +48,7 @@
                     </li> --}}
                     <li>
                         <a href="{{ route('dashboard') }}">
-                            <i class="fa fa-tachometer-alt"></i>
+                            <i class="fa fa-home"></i>
                             <span>ダッシュボード</span>
                             {{-- <span class="badge badge-pill badge-warning">New</span> --}}
                         </a>
