@@ -27,12 +27,6 @@ body {
     color: #b8bfce;
 }
 
-.page-width
-{
-    width: calc(100% - 250px);
-    float: right;
-}
-
 @media (max-width: 767.98px) {
     .page-width {
         width: 100%;

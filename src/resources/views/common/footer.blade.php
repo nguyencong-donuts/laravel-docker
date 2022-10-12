@@ -1,3 +1,3 @@
-<footer class="page-width text-center">
+<footer class="text-center">
     &copy; Copyright 2022 Taro Nguyen
 </footer>
