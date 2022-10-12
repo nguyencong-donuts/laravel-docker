@@ -13,14 +13,10 @@ jQuery(function ($) {
 
     $("#close-sidebar").click(function () {
         $(".page-wrapper").removeClass("toggled");
-        $(".page-wrapper").height("0");
         $(".page-width").width("100%");
-        $(".section").width("100%");
     });
     $("#show-sidebar").click(function () {
         $(".page-wrapper").addClass("toggled");
-        $(".page-wrapper").height("100vh");
         $(".page-width").animate({ "width": "-=250px" }, "100%");
-        $(".section").animate({ "width": "-=250px" }, "100%");
     });
 });

@@ -1,7 +1,7 @@
 @extends('../../layout')
 
 @section('content')
-    <div class="section">
+    <div class="container col-md-10 float-right">
         <div class="row ml-3 mb-3">
             <h2 class="font-weight-bold text-monospace">ユーザー一覧</h2>
         </div>
@@ -18,8 +18,7 @@
             </div>
         @endif
 
-        <div class="row col-md-12">
-            <table class="table table-bordered text-center">
+            <table class="ml-2 table table-bordered text-center">
                 <tr>
                     <th>No</th>
                     <th>名前</th>
@@ -33,19 +32,18 @@
                         <td>{{ $user->email }}</td>
                         <td>
                             <form action="{{ route('users.delete', ['id' => $user->id]) }}" method="DELETE">
-
+    
                                 <a class="btn btn-info" href="{{ route('users.edit', ['id' => $user->id]) }}">修正</a>
-
+    
                                 @csrf
                                 @method('DELETE')
-
+    
                                 <button type="submit" class="btn btn-danger">削除</button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </table>
-        </div>
         {!! $users->links() !!}
     </div>
 @endsection
