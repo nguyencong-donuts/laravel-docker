@@ -1,7 +1,7 @@
 @extends('../../layout')
 
 @section('content')
-    <div class="section">
+    <div class="container col-md-10">
         <div class="row ml-3 mb-3">
             <h2 class="font-weight-bold text-monospace">ユーザー編集</h2>
         </div>
@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <div class="row col-md-6 w-50 m-auto">
+        <div class="row col-md-6 m-auto">
             <form action="{{ route('users.update') }}" method="PUT" autocomplete="off">
                 @csrf
                 <div class="row">

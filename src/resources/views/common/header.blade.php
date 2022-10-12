@@ -17,7 +17,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}">
+                        <a class="nav-link" href="{{ route('profile') }}">
                             <i class="fa fa-user"></i>
                             プロフィール</a>
                     </li>

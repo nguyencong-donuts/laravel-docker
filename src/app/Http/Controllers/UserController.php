@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
@@ -81,5 +82,15 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('users')
                         ->with('success','User deleted successfully');
+    }
+
+    /**
+     * 
+     * @return ユーザー情報
+     */
+    public function profile()
+    {
+        $user = Auth::user();
+        return view('admin.users.profile', compact('user'));
     }
 }

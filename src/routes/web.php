@@ -45,6 +45,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
                 Route::post('save', [UserController::class, 'save'])->name('users.save');
                 // ユーザーアップデート
                 Route::put('update', [UserController::class, 'update'])->name('users.update');
+                // プロフィール
+                Route::get('profile', [UserController::class, 'profile'])->name('profile');
         });
 });
 
