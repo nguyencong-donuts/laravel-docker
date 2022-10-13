@@ -16,7 +16,7 @@ body {
 
 .navbar-laravel {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    background-color: #31353d !important;
+    background-color: #31353d;
 }
 
 .navbar-laravel a {
@@ -79,4 +79,11 @@ body {
 .login-form .row {
     margin-left: 0;
     margin-right: 0;
+}
+
+/* Disable the outline of the button of bootstrap when the focus */
+.btn:focus {
+    outline: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none !important;
 }

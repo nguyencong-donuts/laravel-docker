@@ -59,7 +59,7 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required|min:8'
         ]);
-
+        
         $data = $request->all();
         $this->create($data);
 
