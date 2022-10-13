@@ -10,9 +10,9 @@ class ErrorController extends Controller
      * 
      * @return
      */
-    public function noHaveAccess() 
+    public function accessDenied() 
     {
-        return view('errors.no_have_access');
+        return view('errors.access_denied');
     }
 
     /**

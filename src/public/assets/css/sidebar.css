@@ -485,3 +485,9 @@ body {
 .chiller-theme .sidebar-footer > a:last-child {
     border-right: none;
 }
+
+@media (max-width: 575.98px) {
+    .page-wrapper {
+        display: none;
+    }
+}

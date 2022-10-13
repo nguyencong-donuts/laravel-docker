@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container col-md-10 float-right">
+    <div class="container col-md-10 col-sm-6 float-right">
         <div class="row ml-3 mb-3">
             <h2 class="font-weight-bold text-monospace">ダッシュボード</h2>
         </div>

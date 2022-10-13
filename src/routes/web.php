@@ -54,4 +54,4 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 // エラー
-Route::get('not-have-access', [ErrorController::class, 'noHaveAccess'])->name('not-have-access');
+Route::get('access_denied', [ErrorController::class, 'accessDenied'])->name('access-denied');

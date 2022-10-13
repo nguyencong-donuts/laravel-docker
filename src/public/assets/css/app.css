@@ -40,6 +40,20 @@ body {
     height: 100vh;
 }
 
+.header-width,
+.footer-width {
+    width: calc(100% - 250px);
+    float: right;
+}
+
+@media (max-width: 575.98px) {
+    .header-width,
+    .footer-width {
+        width: 100%;
+        float: left;
+    }
+}
+
 .navbar-brand,
 .nav-link,
 .my-form,
